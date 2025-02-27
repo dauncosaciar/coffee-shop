@@ -1,1 +1,11 @@
-body{background-color:tomato;font-family:Arial,Helvetica,sans-serif}h1{color:#ff0}
+body {
+  background-color: tomato;
+  font-size: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+div {
+  display: grid;
+  grid-template-columns: 3rem;
+}

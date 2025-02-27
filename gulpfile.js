@@ -1,12 +1,15 @@
 const { src, dest, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 
 function css(done) {
   // Compile SASS
   // Steps: 1- Identify .scss file, 2- Compile file, 3- Save .css file
 
   src("src/scss/app.scss")
-    .pipe(sass({ style: "compressed" }))
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
     .pipe(dest("build/css"));
 
   done();

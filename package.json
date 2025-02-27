@@ -15,8 +15,15 @@
   "author": "Daniel Alejandro Uncos Aciar",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "gulp": "^5.0.0",
+    "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.0",
+    "postcss": "^8.5.3",
     "sass": "^1.85.1"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
 }
