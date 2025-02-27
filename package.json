@@ -1,0 +1,20 @@
+{
+  "name": "coffee-shop",
+  "version": "1.0.0",
+  "description": "Coffee Shop with SASS, Gulp, CSS Grid and much more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "gulp",
+    "grid",
+    "css"
+  ],
+  "author": "Daniel Alejandro Uncos Aciar",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}
