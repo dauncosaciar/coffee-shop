@@ -1,11 +1,10 @@
+@use "header/header";
+
 $color: tomato;
 $color2: yellow;
 
 body {
   background-color: $color;
-  font-size: 4rem;
-  display: flex;
-  gap: 2rem;
 }
 
 div {

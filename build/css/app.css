@@ -1,8 +1,10 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background-color: tomato;
-  font-size: 4rem;
-  display: flex;
-  gap: 2rem;
 }
 
 div {
