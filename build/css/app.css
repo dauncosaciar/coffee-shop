@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.nav {
+  font-weight: 700;
+}
+
 body {
   background-color: tomato;
 }
