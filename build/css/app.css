@@ -373,3 +373,11 @@ h3 {
 .bg-primary {
   background-color: #e8505b;
 }
+
+.header {
+  color: black;
+}
+
+.navigation {
+  color: black;
+}
