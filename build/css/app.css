@@ -364,3 +364,12 @@ h2 {
 h3 {
   font-size: 3.2rem;
 }
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: #e8505b;
+}
