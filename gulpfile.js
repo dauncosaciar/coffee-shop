@@ -1,8 +1,13 @@
 const { src, dest, watch, series } = require("gulp");
+
+// CSS y SASS
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+
+// Images
 const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 
 function css(done) {
   /*
@@ -30,6 +35,10 @@ function images() {
 //   done();
 // }
 
+function webpVersion() {
+  return src("src/img/**/*.{png,jpg}").pipe(webp()).pipe(dest("build/img"));
+}
+
 function dev() {
   watch("src/scss/**/*.scss", css);
   watch("src/img/**/*", images);
@@ -38,7 +47,8 @@ function dev() {
 exports.css = css;
 exports.dev = dev;
 exports.images = images;
-exports.default = series(images, css, dev);
+exports.webpVersion = webpVersion;
+exports.default = series(images, webpVersion, css, dev);
 
 /*
   series - a task is started, and until it finishes, the next one starts.
