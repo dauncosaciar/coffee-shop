@@ -8,6 +8,7 @@ const autoprefixer = require("autoprefixer");
 // Images
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const avif = require("gulp-avif");
 
 function css(done) {
   /*
@@ -36,7 +37,23 @@ function images() {
 // }
 
 function webpVersion() {
-  return src("src/img/**/*.{png,jpg}").pipe(webp()).pipe(dest("build/img"));
+  const options = {
+    quality: 50
+  };
+
+  return src("src/img/**/*.{png,jpg}")
+    .pipe(webp(options))
+    .pipe(dest("build/img"));
+}
+
+function avifVersion() {
+  const options = {
+    quality: 50
+  };
+
+  return src("src/img/**/*.{png,jpg}")
+    .pipe(avif(options))
+    .pipe(dest("build/img"));
 }
 
 function dev() {
@@ -48,7 +65,8 @@ exports.css = css;
 exports.dev = dev;
 exports.images = images;
 exports.webpVersion = webpVersion;
-exports.default = series(images, webpVersion, css, dev);
+exports.avifVersion = avifVersion;
+exports.default = series(images, webpVersion, avifVersion, css, dev);
 
 /*
   series - a task is started, and until it finishes, the next one starts.
