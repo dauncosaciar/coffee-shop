@@ -1,3 +1,32 @@
-.navigation {
-  color: black;
+@use "base/variables" as v;
+@use "base/mixins" as m;
+@use "sass:math";
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 5rem;
+
+  @include m.tablet {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  a {
+    text-align: center;
+    color: v.$white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      color: v.$secondary;
+    }
+
+    &.active {
+      color: v.$secondary;
+    }
+  }
 }
