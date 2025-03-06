@@ -6,15 +6,7 @@
   position: relative;
 
   @include m.phone {
-    padding: 4rem;
-  }
-
-  @include m.tablet {
-    padding: 3rem;
-  }
-
-  @include m.desktop {
-    padding: 2rem;
+    padding: 5rem;
   }
 
   &::before {
@@ -33,7 +25,7 @@
   }
 }
 
-// Header of each page
+/* Header of each page */
 .header-home {
   background-image: url(../img/header_home.jpg);
 }
