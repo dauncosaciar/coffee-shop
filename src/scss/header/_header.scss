@@ -1,12 +1,13 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
+/* Header */
 .header {
   padding: 5rem 0;
   position: relative;
 
-  @include m.phone {
-    padding: 5rem;
+  @include m.tablet {
+    min-height: 70rem;
   }
 
   &::before {
@@ -22,6 +23,17 @@
 
   .header-content {
     position: relative;
+
+    h1 {
+      text-align: center;
+      color: v.$white;
+      text-transform: uppercase;
+      margin-top: 5rem;
+
+      @include m.tablet {
+        margin-top: 10rem;
+      }
+    }
   }
 }
 
