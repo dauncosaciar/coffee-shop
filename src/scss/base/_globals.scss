@@ -13,10 +13,12 @@ html {
 body {
   font-family: v.$main_font;
   font-size: 1.6rem;
+  background-color: v.$light_coffee;
 }
 p {
   color: v.$black;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 .container {
   width: 95%;
