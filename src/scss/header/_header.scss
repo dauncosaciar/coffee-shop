@@ -4,7 +4,18 @@
 .header {
   padding: 5rem 0;
   position: relative;
-  @include m.bgColor(red);
+
+  @include m.phone {
+    padding: 4rem;
+  }
+
+  @include m.tablet {
+    padding: 3rem;
+  }
+
+  @include m.desktop {
+    padding: 2rem;
+  }
 
   &::before {
     content: "";
@@ -25,5 +36,4 @@
 // Header of each page
 .header-home {
   background-image: url(../img/header_home.jpg);
-  @include m.bgColor(blue);
 }
