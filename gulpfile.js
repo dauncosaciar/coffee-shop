@@ -4,6 +4,7 @@ const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const plumber = require("gulp-plumber");
 
 // Images
 const imagemin = require("gulp-imagemin");
@@ -17,6 +18,7 @@ function css(done) {
   */
 
   src("src/scss/app.scss")
+    .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(dest("build/css"));
