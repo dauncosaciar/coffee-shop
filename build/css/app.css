@@ -349,11 +349,17 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* Typography */
 h1,
 h2,
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0 0 5rem;
   text-transform: uppercase;
   text-align: center;
@@ -497,4 +503,18 @@ h3 {
     margin-top: -10rem;
     position: relative;
   }
+}
+
+/* Icons */
+.icons {
+  margin-top: 5rem;
+}
+.icons .icons-list li img {
+  margin: 0 auto;
+  width: 12rem;
+}
+.icons .icons-list li p {
+  font-family: "Bona Nova", serif;
+  font-size: 3.2rem;
+  color: #5e311e;
 }
