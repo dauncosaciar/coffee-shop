@@ -1,10 +1,15 @@
 @use "base/variables" as v;
+@use "base/mixins" as m;
 
 /* Icons */
 .icons {
   margin-top: 5rem;
 
   .icons-list {
+    @include m.tablet {
+      @include m.grid(3, 2rem);
+    }
+
     li {
       img {
         margin: 0 auto;

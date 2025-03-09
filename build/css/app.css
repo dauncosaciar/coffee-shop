@@ -509,6 +509,15 @@ h3 {
 .icons {
   margin-top: 5rem;
 }
+@media (min-width: 768px) {
+  .icons .icons-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
 .icons .icons-list li img {
   margin: 0 auto;
   width: 12rem;
