@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "base/variables" as v;
 
 /* Utilities */
 .text-center {
@@ -12,4 +12,7 @@
 }
 .margin-negative-10 {
   margin-top: -10rem;
+}
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
