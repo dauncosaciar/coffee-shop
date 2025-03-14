@@ -5,6 +5,7 @@ const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const plumber = require("gulp-plumber");
+const sourcemaps = require("gulp-sourcemaps");
 
 // Images
 const imagemin = require("gulp-imagemin");
@@ -19,8 +20,10 @@ function css(done) {
 
   src("src/scss/app.scss")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write("."))
     .pipe(dest("build/css"));
 
   done();
