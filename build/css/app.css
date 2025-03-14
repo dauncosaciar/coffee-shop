@@ -460,6 +460,10 @@ h3 {
   background-image: url(../img/menu_header.jpg);
 }
 
+.gallery-header {
+  background-image: url(../img/gallery_header.jpg);
+}
+
 /* Bar */
 .bar {
   display: flex;
